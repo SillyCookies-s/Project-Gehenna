@@ -8,10 +8,11 @@ spec:
   source:
     repoURL: https://github.com/SillyCookies-s/Project-Gehenna.git
     targetRevision: main
-    path: k8s
+    path: gehenna-chart
+    helm: {}
   destination:
     server: https://kubernetes.default.svc
-    namespace: gehenna
+    namespace: avaline # match the namespace with the one in values.yaml for consistency or any errors
   syncPolicy:
     automated:
       prune: true

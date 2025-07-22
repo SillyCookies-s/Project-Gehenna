@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongo-express
-  namespace: gehenna
+  namespace: {{ .Values.namespace }}
 spec:
   selector:
     matchLabels:
@@ -19,7 +19,7 @@ spec:
         - containerPort: 8081
         env:
         - name: ME_CONFIG_MONGODB_SERVER
-          value: mongo.gehenna.svc.cluster.local
+          value: mongo.{{ .Values.namespace }}.svc.cluster.local
 ---
 apiVersion: v1
 kind: Service

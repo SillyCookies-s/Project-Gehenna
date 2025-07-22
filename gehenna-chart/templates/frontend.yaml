@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gehenna-frontend
-  namespace: gehenna
+  namespace: {{ .Values.namespace }}
 spec:
   selector:
     matchLabels:
@@ -19,7 +19,7 @@ spec:
         - name: PORT
           value: "4000"
         - name: BACKEND_URL
-          value: http://gehenna-backend.gehenna.svc.cluster.local:3000
+          value: http://gehenna-backend.{{ .Values.namespace }}.svc.cluster.local:3000
         ports:
         - containerPort: 4000
 ---
