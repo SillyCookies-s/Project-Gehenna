@@ -11,6 +11,10 @@ app = Flask(__name__)
 def index():
     return jsonify({"message": "Welcome to the Gehenna Backend!"})
 
+@app.route('/api')
+def api_index():
+    return jsonify({"message": "Welcome to the Gehenna Backend API!"})
+
 @app.route('/api/get')
 def api():
     

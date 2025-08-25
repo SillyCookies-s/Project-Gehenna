@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/SillyCookies-s/Project-Gehenna.git
-    targetRevision: main
+    targetRevision: Tram
     path: gehenna-chart
     helm: {}
   destination:
