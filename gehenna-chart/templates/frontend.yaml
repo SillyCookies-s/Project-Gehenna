@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: gehenna-frontend
-        image: docker.io/namanss/gehenna-frontend:v4
+        image: {{ Values.frontendImage }}
         env:
         - name: PORT
           value: "4000"
@@ -33,3 +33,4 @@ spec:
   ports:
   - port: 4000
     targetPort: 4000
+    type: NodePort

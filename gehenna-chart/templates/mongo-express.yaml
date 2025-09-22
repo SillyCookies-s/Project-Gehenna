@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mongo-express
-        image: docker.io/mongo-express
+        image: {{ .Values.mongoexpressImage}}
         ports:
         - containerPort: 8081
         env:
@@ -31,4 +31,5 @@ spec:
   ports:
   - port: 5000
     targetPort: 8081
+    type: NodePort
 

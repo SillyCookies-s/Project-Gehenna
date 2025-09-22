@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/SillyCookies-s/Project-Gehenna.git
+    repoURL: https://github.com/NamanSondhiya/Project-Gehenna.git
     targetRevision: Tram
     path: gehenna-chart
     helm: {}

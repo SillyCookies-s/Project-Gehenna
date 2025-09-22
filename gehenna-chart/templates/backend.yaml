@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: gehenna-backend
-        image: docker.io/namanss/gehenna-backend:v5
+        image: {{ .Values.backendImage }}
         ports:
         - containerPort: 3000
         env:
@@ -33,4 +33,5 @@ spec:
   ports:
   - port: 3000
     targetPort: 3000
+    type: NodePort
 
